@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: navy;
+    height: 120px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  }
+  
+  .logo img {
+    height: 100px; /* Adjust based on your logo's size */
+  }
+  
+  .nav-links a {
+    font-size: 16px; /* Standard readable size */
+    font-weight: 400; /* Regular weight for clarity */
+    color: #f0f0f0; /* High contrast for legibility */
+    text-decoration: none; /* Typically, underlines are removed from nav links */
+    padding: 10px 15px; /* Adequate padding for clickable area */
+    margin: 15px; /* Spacing between links */
+  }
+  
+  .nav-links a:hover, .nav-links a:focus {
+    font-weight: 500; /* Slightly bolder on hover/focus for emphasis */
+    
+  }
