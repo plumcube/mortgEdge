@@ -95,6 +95,7 @@ header {
 .box {
     flex: 1; /* Makes both boxes take up equal space */
     margin: 5px; /* Adds some space between the boxes */
+
 }
 
 .left-box {
@@ -163,12 +164,15 @@ header {
     color: lightskyblue;
 }
 
+#difficulties {
+    height: 60vh;
+}
 #difficulties>.boxes{
-    height: 300px;
+    height: 250px;
     text-align: center;
 }
-#difficulties>p.box {
-    text-align: center !important;
+#difficulties p {
+    padding: 20px;
 }
 
 .box3_1,
