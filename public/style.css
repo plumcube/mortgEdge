@@ -32,9 +32,8 @@ header {
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: url('path/to/your/hero-background.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #004165; /* Navy font color */
 }
 
 .hero h1 {
@@ -45,27 +44,22 @@ header {
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
+    max-width: 600px; /* Optional: to control the width of the text for better readability */
+    margin-left: auto; /* These two margin settings center the paragraph */
+    margin-right: auto;
 }
 
 .hero button {
     font-size: 18px;
-    color: #004165;
+    color: #004165; /* Navy color for the button text */
     background-color: white;
-    border: 2px solid white;
+    border: 2px solid #004165; /* Navy border for the button */
     padding: 10px 30px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .hero button:hover {
-    background-color: #004165;
-    color: white;
-    border-color: #004165;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #004165; /* Navy background on hover */
+    color: white; /* White text on hover */
 }
