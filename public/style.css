@@ -67,6 +67,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    height: 100vh;
 }
 
 .box {
@@ -80,6 +81,57 @@ header {
 .left-box {
     width: 40%;
 }
+
+.left-box h1 {
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    /* border: solid 1px red; */
+}
+
+.left-box p {
+    font-size: 24px;
+    max-width: 350px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.full-width-button {
+    padding: 15px 20px; /* Large padding for bigger buttons */
+    margin-top: 20px; /* Space between the buttons */
+    background-color: #004165;
+    color: white; /* Text color */
+    cursor: pointer; /* Cursor changes to pointer to indicate button */
+    text-transform: uppercase; /* Optional: uppercase text */
+    font-weight: bold; /* Optional: bold text */
+    font-size: 16px; /* Button text size */
+    width: 90%; /* Make the button fill the width of the .box */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: left;
+    border: 3px solid #004165;
+}
+
+.full-width-button:hover {
+    color: navy;
+    background-color: #fff; /* Darker shade on hover for visual feedback */
+    border: 3px solid grey;
+}
+
+.button-container .btn2 {
+    background-color: lightskyblue;
+    color: #004165;
+    border: 3px solid lightskyblue;
+}
+
+.full-width-button:hover {
+    color: navy;
+    background-color: #fff; /* Darker shade on hover for visual feedback */
+    border: 3px solid grey;
+}
+
+
 .right-box {
     width: 40%;
 }
