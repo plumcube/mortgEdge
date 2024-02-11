@@ -1,6 +1,8 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Roboto Condensed', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Akshar', sans-serif; */
     color: #333;
 }
 
@@ -15,7 +17,11 @@ header {
 
 .logo {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 40px;
+    font-family: 'Alatsi', sans-serif;
+}
+.logo .edge {
+    color: lightskyblue;
 }
 
 .navbar a {
@@ -30,36 +36,52 @@ header {
 }
 
 .hero {
-    text-align: center;
-    padding: 100px 20px;
+    text-align: left;
+    padding: 10px 30px;
+    margin: auto;
     background-color: #f0f0f0; /* Light gray background */
     color: #004165; /* Navy font color */
+    font-family: 'Akshar', sans-serif;
+    border: solid 1px green;
 }
 
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    border: solid 1px red;
 }
 
 .hero p {
     font-size: 20px;
-    margin-bottom: 30px;
-    max-width: 600px; /* Optional: to control the width of the text for better readability */
+    /* margin-bottom: 30px; */
+    text-align: left;
+    /* max-width: 800px; Optional: to control the width of the text for better readability */
     margin-left: auto; /* These two margin settings center the paragraph */
     margin-right: auto;
+    border: solid 1px blue;
 }
 
-.hero button {
-    font-size: 18px;
-    color: #004165; /* Navy color for the button text */
-    background-color: white;
-    border: 2px solid #004165; /* Navy border for the button */
-    padding: 10px 30px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+.dual-boxes {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-.hero button:hover {
-    background-color: #004165; /* Navy background on hover */
-    color: white; /* White text on hover */
+.box {
+    height: 60%;
+    flex: 1; /* Makes both boxes take up equal space */
+    margin: 5px; /* Adds some space between the boxes */
+    background-color: #f0f0f0; /* Light gray background for visibility */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
+    border: solid 1px darkkhaki;
+}
+
+.left-box {
+    width: 50%;
+}
+.right-box {
+    width: 50%;
+}
+.right-box>img {
+    width: 100%;
 }
