@@ -3,7 +3,7 @@ body {
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: 'Roboto Condensed', Tahoma, Geneva, Verdana, sans-serif;
     /* font-family: 'Akshar', sans-serif; */
-    color: #333;
+    color: #004165; /* Assuming a navy blue color */
 }
 
 header {
@@ -42,23 +42,25 @@ header {
     background-color: #f0f0f0; /* Light gray background */
     color: #004165; /* Navy font color */
     font-family: 'Akshar', sans-serif;
-    border: solid 1px green;
+    /* border: solid 1px green; */
 }
 
 .hero h1 {
     font-size: 48px;
-    margin-bottom: 20px;
-    border: solid 1px red;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    /* border: solid 1px red; */
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 30px;
     /* margin-bottom: 30px; */
     text-align: left;
-    /* max-width: 800px; Optional: to control the width of the text for better readability */
-    margin-left: auto; /* These two margin settings center the paragraph */
-    margin-right: auto;
-    border: solid 1px blue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 1100px;
+    /* border: solid 1px blue; */
+    line-height: 1.1;
 }
 
 .dual-boxes {
@@ -71,16 +73,15 @@ header {
     height: 60%;
     flex: 1; /* Makes both boxes take up equal space */
     margin: 5px; /* Adds some space between the boxes */
-    background-color: #f0f0f0; /* Light gray background for visibility */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
     border: solid 1px darkkhaki;
 }
 
 .left-box {
-    width: 50%;
+    width: 40%;
 }
 .right-box {
-    width: 50%;
+    width: 40%;
 }
 .right-box>img {
     width: 100%;
