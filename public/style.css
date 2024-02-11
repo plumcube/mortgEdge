@@ -1,22 +1,16 @@
 body {
     margin: 0;
-    padding-top: 100px; /* Adjust this value based on the height of your fixed navbar to prevent content from being hidden behind it */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
 }
 
 header {
-    position: fixed; /* Makes the header fixed at the top */
-    top: 0; /* Aligns the header at the top of the viewport */
-    width: 100%; /* Ensures the header spans the full width of the viewport */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     background-color: #004165; /* Assuming a navy blue color */
     color: white;
-    z-index: 1000; /* Ensures the header stays above other content */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for better separation from the page content */
 }
 
 .logo {
