@@ -13,6 +13,9 @@ header {
     padding: 20px;
     background-color: #004165; /* Assuming a navy blue color */
     color: white;
+    position: fixed;
+    top:0;
+    width: 100%;
 }
 
 .logo {
@@ -22,6 +25,12 @@ header {
 }
 .logo .edge {
     color: lightskyblue;
+}
+
+.navbar {
+    padding-top: 50px;
+    width: 530px;
+    /* border: 1px solid red; */
 }
 
 .navbar a {
@@ -39,10 +48,22 @@ header {
     text-align: left;
     padding: 10px 30px;
     margin: auto;
-    background-color: #f0f0f0; /* Light gray background */
-    color: #004165; /* Navy font color */
     font-family: 'Akshar', sans-serif;
     /* border: solid 1px green; */
+}
+
+#home {
+    margin-top: 100px;    
+}
+
+.hero.home {
+    background-color: #f0f0f0; /* Light gray background */
+    color: #004165; /* Navy font color */
+}
+
+.hero.mission {
+    background-color: #004165;
+    color: #fff;
 }
 
 .hero h1 {
@@ -55,7 +76,7 @@ header {
 .hero p {
     font-size: 30px;
     /* margin-bottom: 30px; */
-    text-align: left;
+    /* text-align: left; */
     margin-top: 10px;
     margin-bottom: 10px;
     max-width: 1100px;
@@ -63,19 +84,17 @@ header {
     line-height: 1.1;
 }
 
-.dual-boxes {
+.boxes {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    height: 100vh;
+    height: 65vh;
+    /* border: solid 1px red; */
 }
 
 .box {
-    height: 60%;
     flex: 1; /* Makes both boxes take up equal space */
     margin: 5px; /* Adds some space between the boxes */
-    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1);  */
-    /* border: solid 1px darkkhaki; */
 }
 
 .left-box {
@@ -137,4 +156,22 @@ header {
 }
 .right-box>img {
     width: 100%;
+}
+
+.mission h1,
+.mission a {
+    color: lightskyblue;
+}
+
+#difficulties>.boxes{
+    height: 300px;
+    text-align: center;
+}
+#difficulties>p.box {
+    text-align: center !important;
+}
+
+.box3_1,
+.box3_2 {
+    border-right: solid 2px lightskyblue;
 }
