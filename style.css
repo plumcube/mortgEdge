@@ -74,8 +74,8 @@ header {
     height: 60%;
     flex: 1; /* Makes both boxes take up equal space */
     margin: 5px; /* Adds some space between the boxes */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
-    border: solid 1px darkkhaki;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1);  */
+    /* border: solid 1px darkkhaki; */
 }
 
 .left-box {
@@ -107,7 +107,7 @@ header {
     text-transform: uppercase; /* Optional: uppercase text */
     font-weight: bold; /* Optional: bold text */
     font-size: 16px; /* Button text size */
-    width: 90%; /* Make the button fill the width of the .box */
+    width: 85%; /* Make the button fill the width of the .box */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     text-align: left;
     border: 3px solid #004165;
