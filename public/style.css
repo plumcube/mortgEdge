@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding-top: 100px; /* Adjust this value based on the height of your fixed navbar to prevent content from being hidden behind it */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+header {
+    position: fixed; /* Makes the header fixed at the top */
+    top: 0; /* Aligns the header at the top of the viewport */
+    width: 100%; /* Ensures the header spans the full width of the viewport */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #004165; /* Assuming a navy blue color */
+    color: white;
+    z-index: 1000; /* Ensures the header stays above other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for better separation from the page content */
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('path/to/your/hero-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    font-size: 18px;
+    color: #004165;
+    background-color: white;
+    border: 2px solid white;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #004165;
+    color: white;
+    border-color: #004165;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
