@@ -61,11 +61,6 @@ header {
     color: #004165; /* Navy font color */
 }
 
-.hero.mission {
-    background-color: #004165;
-    color: #fff;
-}
-
 .hero h1 {
     font-size: 48px;
     margin-top: 20px;
@@ -152,11 +147,16 @@ header {
 }
 
 
-.right-box {
+/* .right-box {
     width: 40%;
-}
-.right-box>img {
+} */
+.mobile2 {
     width: 100%;
+}
+
+.mission {
+    background-color: #004165;
+    color: #fff;
 }
 
 .mission h1,
@@ -173,9 +173,20 @@ header {
 }
 #difficulties p {
     padding: 20px;
+    
+}
+#difficulties .box3_1,
+#difficulties .box3_2 {
+    border-right: solid 2px lightskyblue;
+    /* border: solid 1px red; */
 }
 
-.box3_1,
-.box3_2 {
-    border-right: solid 2px lightskyblue;
+#save {
+    background-color: #004165;
+    color: #fff;
+    height: 90vh;
+}
+
+.savings3 {
+    width: 600px;
 }
