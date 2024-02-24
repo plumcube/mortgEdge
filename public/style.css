@@ -18,11 +18,21 @@ header {
     width: 100%;
 }
 
+.theme2 {
+    background-color: #004165;
+    color: #fff;
+}
+
+.theme2 .highlight {
+    color: lightskyblue;
+}
+
 .logo {
     font-weight: bold;
     font-size: 40px;
     font-family: 'Alatsi', sans-serif;
 }
+
 .logo .edge {
     color: lightskyblue;
 }
@@ -52,7 +62,8 @@ header {
     /* border: solid 1px green; */
 }
 
-#home {
+#home,
+#boost {
     margin-top: 100px;    
 }
 
@@ -83,6 +94,11 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    /* height: 65vh; */
+    /* border: solid 1px red; */
+}
+
+#home .boxes {
     height: 65vh;
     /* border: solid 1px red; */
 }
@@ -126,6 +142,27 @@ header {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     text-align: left;
     border: 3px solid #004165;
+}
+
+.full-width-grey-button {
+    padding: 15px 20px; /* Large padding for bigger buttons */
+    margin-top: 20px; /* Space between the buttons */
+    background-color: lightgrey;
+    color: #004165; /* Text color */
+    cursor: pointer; /* Cursor changes to pointer to indicate button */
+    text-transform: uppercase; /* Optional: uppercase text */
+    font-weight: bold; /* Optional: bold text */
+    font-size: 16px; /* Button text size */
+    width: 85%; /* Make the button fill the width of the .box */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: left;
+    border: 3px solid #004165;
+}
+
+.full-width-grey-button:hover {
+    color: navy;
+    background-color: #fff; /* Darker shade on hover for visual feedback */
+    border: 3px solid grey;
 }
 
 .full-width-button:hover {
@@ -189,4 +226,36 @@ header {
 
 .savings3 {
     width: 600px;
+}
+
+#contact .hero{
+    margin: auto;
+    text-align: center;
+}
+
+#contact .boxes {
+    width: 800px;
+    margin: auto;
+}
+
+#contact input {
+    width: 95%;
+    height: 30px;
+    padding: 8px;
+    background: #f9f9f9;
+    border: 0px;
+    border-bottom: 1px solid darkgray;
+    color: darkgray;
+    /* background-color: gainsboro; */
+}
+#contact select {
+    width: 790px;
+    padding: 5px;
+    background: #f9f9f9;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    border: 0px;
+    border-bottom: 1px solid darkgray;
+    color: darkgray;
 }
