@@ -113,6 +113,7 @@ header {
     width: 40%;
 }
 
+.right-box h1,
 .left-box h1 {
     font-size: 48px;
     margin-top: 20px;
@@ -120,13 +121,37 @@ header {
     /* border: solid 1px red; */
 }
 
+.right-box p,
 .left-box p {
     font-size: 24px;
     max-width: 350px;
+    /* border: solid 1px green; */
+    margin: 30px auto;
 }
 
 .button-container {
     margin-top: 20px;
+}
+
+.medium-button {
+    padding: 10px 20px; /* Large padding for bigger buttons */
+    margin: auto; /* Space between the buttons */
+    background-color: skyblue;
+    color: #004165; /* Text color */
+    cursor: pointer; /* Cursor changes to pointer to indicate button */
+    text-transform: uppercase; /* Optional: uppercase text */
+    font-weight: bold; /* Optional: bold text */
+    font-size: 16px; /* Button text size */
+    width: 35%; /* Make the button fill the width of the .box */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: center;
+    border: 0px solid #004165;
+}
+
+.medium-button:hover {
+    color: white;
+    background-color: #004165; /* Darker shade on hover for visual feedback */
+    /* border: 3px solid grey; */
 }
 
 .full-width-button {
@@ -191,6 +216,7 @@ header {
     width: 100%;
 }
 
+.invest,
 .mission {
     background-color: #004165;
     color: #fff;
@@ -258,4 +284,24 @@ header {
     border: 0px;
     border-bottom: 1px solid darkgray;
     color: darkgray;
+}
+
+.future-img {
+    margin-top: 60px;
+    width: 450px;
+}
+
+.fibonacci {
+    width: 100%;
+    height: 250px;
+}
+
+#invest {
+    text-align: center;
+}
+
+.invest h1,
+.invest a {
+    color: lightskyblue;
+    text-align: center;
 }
