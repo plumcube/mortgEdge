@@ -33,6 +33,11 @@ header {
     font-family: 'Alatsi', sans-serif;
 }
 
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
 .logo .edge {
     color: lightskyblue;
 }
@@ -63,7 +68,8 @@ header {
 }
 
 #home,
-#boost {
+#boost,
+#tailored {
     margin-top: 100px;    
 }
 
@@ -126,7 +132,6 @@ header {
     font-size: 24px;
     max-width: 350px;
     /* border: solid 1px green; */
-    margin: 30px auto;
 }
 
 .button-container {
@@ -135,7 +140,7 @@ header {
 
 .medium-button {
     padding: 10px 20px; /* Large padding for bigger buttons */
-    margin: auto; /* Space between the buttons */
+    margin: 0px auto 30px; /* Space between the buttons */
     background-color: skyblue;
     color: #004165; /* Text color */
     cursor: pointer; /* Cursor changes to pointer to indicate button */
@@ -217,13 +222,16 @@ header {
 }
 
 .invest,
-.mission {
+.mission,
+.tailored {
     background-color: #004165;
     color: #fff;
 }
 
 .mission h1,
-.mission a {
+.mission a,
+.tailored h1,
+.tailored a {
     color: lightskyblue;
 }
 
@@ -304,4 +312,8 @@ header {
 .invest a {
     color: lightskyblue;
     text-align: center;
+}
+
+.center {
+    margin:auto;
 }
