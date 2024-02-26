@@ -3,7 +3,7 @@ body {
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: 'Roboto Condensed', Tahoma, Geneva, Verdana, sans-serif;
     /* font-family: 'Akshar', sans-serif; */
-    color: #004165; /* Assuming a navy blue color */
+    color: #004165;
 }
 
 header {
@@ -11,10 +11,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #004165; /* Assuming a navy blue color */
+    background-color: #004165;
     color: white;
     position: fixed;
-    top:0;
+    top: 0;
     width: 100%;
 }
 
@@ -70,12 +70,14 @@ header {
 #home,
 #boost,
 #tailored {
-    margin-top: 100px;    
+    margin-top: 100px;
 }
 
 .hero.home {
-    background-color: #f0f0f0; /* Light gray background */
-    color: #004165; /* Navy font color */
+    background-color: #f0f0f0;
+    /* Light gray background */
+    color: #004165;
+    /* Navy font color */
 }
 
 .hero h1 {
@@ -110,8 +112,10 @@ header {
 }
 
 .box {
-    flex: 1; /* Makes both boxes take up equal space */
-    margin: 5px; /* Adds some space between the boxes */
+    flex: 1;
+    /* Makes both boxes take up equal space */
+    margin: 5px;
+    /* Adds some space between the boxes */
 
 }
 
@@ -139,79 +143,84 @@ header {
 }
 
 .medium-button {
-    padding: 10px 20px; /* Large padding for bigger buttons */
-    margin: 0px auto 30px; /* Space between the buttons */
-    background-color: skyblue;
-    color: #004165; /* Text color */
-    cursor: pointer; /* Cursor changes to pointer to indicate button */
-    text-transform: uppercase; /* Optional: uppercase text */
-    font-weight: bold; /* Optional: bold text */
-    font-size: 16px; /* Button text size */
-    width: 35%; /* Make the button fill the width of the .box */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px 20px;
+    /* Large padding for bigger buttons */
+    margin: 0px auto 30px;
+    /* Space between the buttons */
+    cursor: pointer;
+    /* Cursor changes to pointer to indicate button */
+    text-transform: uppercase;
+    /* Optional: uppercase text */
+    font-weight: bold;
+    /* Optional: bold text */
+    font-size: 16px;
+    /* Button text size */
+    width: 40%;
+    /* Make the button fill the width of the .box */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
     text-align: center;
-    border: 0px solid #004165;
 }
 
-.medium-button:hover {
-    color: white;
-    background-color: #004165; /* Darker shade on hover for visual feedback */
-    /* border: 3px solid grey; */
+.sky-btn {
+    background-color: skyblue;
+    color: #004165;
+    border: 3px solid skyblue;
 }
+
+.sky-btn:hover {
+    background-color: white;
+    color: #004165;
+    border: 3px solid #004165;
+}
+
+.grey-btn {
+    background-color: lightgray;
+    color: #004165;
+    border: 3px solid lightgray;
+}
+
+.grey-btn:hover {
+    background-color: #fff;
+    color: #004165;
+    border: 3px solid #004165;
+}
+
+.navy-btn {
+    background-color: #004165;
+    color: white;
+    border: 3px solid #004165;
+}
+
+.navy-btn:hover {
+    background-color: white;
+    color: #004165;
+    border: 3px solid #004165;
+}
+
 
 .full-width-button {
-    padding: 15px 20px; /* Large padding for bigger buttons */
-    margin-top: 20px; /* Space between the buttons */
-    background-color: #004165;
-    color: white; /* Text color */
-    cursor: pointer; /* Cursor changes to pointer to indicate button */
-    text-transform: uppercase; /* Optional: uppercase text */
-    font-weight: bold; /* Optional: bold text */
-    font-size: 16px; /* Button text size */
-    width: 85%; /* Make the button fill the width of the .box */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 15px 20px;
+    /* Large padding for bigger buttons */
+    margin-top: 20px;
+    /* Space between the buttons */
+    
+    /* Text color */
+    cursor: pointer;
+    /* Cursor changes to pointer to indicate button */
+    text-transform: uppercase;
+    /* Optional: uppercase text */
+    font-weight: bold;
+    /* Optional: bold text */
+    font-size: 16px;
+    /* Button text size */
+    width: 85%;
+    /* Make the button fill the width of the .box */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
     text-align: left;
-    border: 3px solid #004165;
 }
 
-.full-width-grey-button {
-    padding: 15px 20px; /* Large padding for bigger buttons */
-    margin-top: 20px; /* Space between the buttons */
-    background-color: lightgrey;
-    color: #004165; /* Text color */
-    cursor: pointer; /* Cursor changes to pointer to indicate button */
-    text-transform: uppercase; /* Optional: uppercase text */
-    font-weight: bold; /* Optional: bold text */
-    font-size: 16px; /* Button text size */
-    width: 85%; /* Make the button fill the width of the .box */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    text-align: left;
-    border: 3px solid #004165;
-}
-
-.full-width-grey-button:hover {
-    color: navy;
-    background-color: #fff; /* Darker shade on hover for visual feedback */
-    border: 3px solid grey;
-}
-
-.full-width-button:hover {
-    color: navy;
-    background-color: #fff; /* Darker shade on hover for visual feedback */
-    border: 3px solid grey;
-}
-
-.button-container .btn2 {
-    background-color: lightskyblue;
-    color: #004165;
-    border: 3px solid lightskyblue;
-}
-
-.full-width-button:hover {
-    color: navy;
-    background-color: #fff; /* Darker shade on hover for visual feedback */
-    border: 3px solid grey;
-}
 
 
 /* .right-box {
@@ -223,7 +232,8 @@ header {
 
 .invest,
 .mission,
-.tailored {
+.tailored,
+.options {
     background-color: #004165;
     color: #fff;
 }
@@ -238,14 +248,17 @@ header {
 #difficulties {
     height: 60vh;
 }
-#difficulties>.boxes{
+
+#difficulties>.boxes {
     height: 250px;
     text-align: center;
 }
+
 #difficulties p {
     padding: 20px;
-    
+
 }
+
 #difficulties .box3_1,
 #difficulties .box3_2 {
     border-right: solid 2px lightskyblue;
@@ -262,7 +275,7 @@ header {
     width: 600px;
 }
 
-#contact .hero{
+#contact .hero {
     margin: auto;
     text-align: center;
 }
@@ -282,6 +295,7 @@ header {
     color: darkgray;
     /* background-color: gainsboro; */
 }
+
 #contact select {
     width: 790px;
     padding: 5px;
@@ -315,5 +329,25 @@ header {
 }
 
 .center {
-    margin:auto;
+    margin: auto;
+    text-align: center;
+}
+
+#options {
+    border-top: 15px solid #004165;
+}
+
+#options .box {
+    background-color: skyblue;
+
+}
+
+#options p {
+    color: white;
+}
+
+#options .boxes {
+    max-width: 1000px;
+    height: 65vh;
+    /* border: solid 1px red; */
 }
