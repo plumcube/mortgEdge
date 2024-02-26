@@ -218,18 +218,15 @@ header {
 }
 
 
-
-/* .right-box {
-    width: 40%;
-} */
-.mobile2 {
+.full-width {
     width: 100%;
 }
 
 .invest,
 .mission,
 .tailored,
-.options {
+.options,
+.solutions {
     background-color: #004165;
     color: #fff;
 }
@@ -353,4 +350,16 @@ header {
 #options .content {
     text-align: center;
     height: 200px;
+}
+
+#solutions {
+    background-color: #004165;
+    color: skyblue;
+    text-align: left;
+}
+
+#solutions .left-box {
+    max-width: 400px;
+    margin-right: 50px;
+    
 }
