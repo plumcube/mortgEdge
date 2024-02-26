@@ -134,8 +134,6 @@ header {
 .right-box p,
 .left-box p {
     font-size: 24px;
-    max-width: 350px;
-    /* border: solid 1px green; */
 }
 
 .button-container {
@@ -204,8 +202,6 @@ header {
     /* Large padding for bigger buttons */
     margin-top: 20px;
     /* Space between the buttons */
-    
-    /* Text color */
     cursor: pointer;
     /* Cursor changes to pointer to indicate button */
     text-transform: uppercase;
@@ -338,16 +334,23 @@ header {
 }
 
 #options .box {
+    margin: 0px 30px;
     background-color: skyblue;
-
+    border: 1px solid #004165;
 }
 
 #options p {
     color: white;
+    padding: 30px 40px;
 }
 
 #options .boxes {
     max-width: 1000px;
-    height: 65vh;
+    min-height: 50vh;
     /* border: solid 1px red; */
+}
+
+#options .content {
+    text-align: center;
+    height: 200px;
 }
