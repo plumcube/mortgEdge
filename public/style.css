@@ -69,7 +69,9 @@ header {
 
 #home,
 #boost,
-#tailored {
+#tailored,
+#flexible,
+#pricing {
     margin-top: 100px;
 }
 
@@ -226,7 +228,11 @@ header {
 .mission,
 .tailored,
 .options,
-.solutions {
+.solutions,
+.flexible,
+.why,
+#need,
+#pricing {
     background-color: #004165;
     color: #fff;
 }
@@ -234,7 +240,9 @@ header {
 .mission h1,
 .mission a,
 .tailored h1,
-.tailored a {
+.tailored a,
+.need h1,
+#pricing h2 {
     color: lightskyblue;
 }
 
@@ -361,5 +369,55 @@ header {
 #solutions .left-box {
     max-width: 400px;
     margin-right: 50px;
-    
+}
+
+#flexible li,
+#why li {
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+#why .boxes {
+    padding: 0;
+}
+
+#why .right-box {
+    background-color: skyblue;
+}
+
+#why .box {
+    margin: 0;
+    padding-left: 25px;
+    height: 60vh;
+}
+
+#need h2 {
+    font-size: 34px;
+}
+
+#need .box {
+    max-width: 180px;
+    padding: 40px;
+}
+
+#need .note {
+    color: lightgray;
+}
+
+#pricing {
+    height: 90vh;
+}
+
+#pricing h2 {
+    font-size: 36px;
+}
+
+#pricing .highlight {
+    background-color: #fff;
+    color: #004165;
+}
+
+#pricing li {
+    text-align: left;
+    font-size: 30px;
 }
