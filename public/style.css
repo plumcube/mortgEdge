@@ -224,6 +224,7 @@ header {
     width: 100%;
 }
 
+#seed,
 .invest,
 .mission,
 .tailored,
@@ -312,6 +313,14 @@ header {
 .future-img {
     margin-top: 60px;
     width: 450px;
+}
+
+.seed-img {
+    width: 100%;
+}
+
+#seed .box {
+    min-width: 400px;
 }
 
 .fibonacci {
