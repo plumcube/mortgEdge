@@ -30,6 +30,7 @@ header {
 
 .theme2 .highlight {
     color: lightskyblue;
+    margin-top: 0px;
 }
 
 .logo {
@@ -260,6 +261,7 @@ header {
 #difficulties>.boxes {
     height: 250px;
     text-align: center;
+    margin-top: 50px;
 }
 
 #difficulties p {
