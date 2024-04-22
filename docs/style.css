@@ -165,7 +165,7 @@ header {
 }
 
 .button-container {
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -174,7 +174,7 @@ header {
 .medium-button {
     padding: 10px 20px;
     /* Large padding for bigger buttons */
-    margin: 0px auto 30px;
+    margin: 0px auto 10px;
     /* Space between the buttons */
     cursor: pointer;
     /* Cursor changes to pointer to indicate button */
@@ -389,7 +389,7 @@ header {
 #options .box {
     margin: 0px 30px;
     background-color: skyblue;
-    border: 1px solid #004165;
+    border-radius: 40px;
 }
 
 #options p {
@@ -397,9 +397,15 @@ header {
     padding: 30px 40px;
 }
 
+#options .title {
+    width: 620px;
+    margin-top: 10px;
+    font-size: 34px;
+}
+
 #options .boxes {
     max-width: 1000px;
-    min-height: 50vh;
+    min-height: 46vh;
     /* border: solid 1px red; */
 }
 
