@@ -90,7 +90,6 @@ header {
 }
 
 #home,
-#boost,
 #tailored,
 #flexible,
 #pricing {
@@ -115,6 +114,44 @@ header {
 
 #tailored h2 {
     color: skyblue;
+}
+
+#works .subtitle {
+    width: 600px;
+}
+
+#works .box {
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#savings .box {
+    border-radius: 10px;
+    border: solid 1px skyblue;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#savings p {
+    font-size: 24px;
+    text-align: center;
+}
+
+#savings li {
+    margin-bottom: 20px;
+}
+
+.navy {
+    background-color: #004165;
+    color: white;
+}
+
+.sky {
+    background-color: skyblue;
+}
+
+.gray {
+    background-color: #aaa;
 }
 
 .hero.home {
@@ -298,6 +335,7 @@ header {
 .tailored,
 .options,
 .why,
+#savings .hero,
 #need,
 #pricing {
     background-color: #004165;
@@ -308,7 +346,8 @@ header {
 .mission a,
 .tailored a,
 .need h1,
-#pricing h2 {
+#pricing h2,
+#savings h2 {
     color: lightskyblue;
 }
 
@@ -377,10 +416,13 @@ header {
 }
 
 .future-img {
-    margin-top: 60px;
-    width: 450px;
+    width: 360px;
+    margin-left: 100px;
 }
 
+#simplified .highlight {
+    color: skyblue;
+}
 
 
 #seed .box {
