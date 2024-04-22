@@ -23,6 +23,22 @@ header {
     margin: auto;
 } */
 
+#seed .highlight{
+    color: lightskyblue;
+}
+
+#seed .title {
+    text-align: center;
+    position: static;
+}
+
+.seed-img {
+    width: 100%;
+    z-index: -5;
+    position: relative;
+    margin-top: -100px;
+}
+
 .theme2 {
     background-color: #004165;
     color: #fff;
@@ -119,6 +135,10 @@ header {
     /* border: solid 1px red; */
 }
 
+#home h2{
+    text-align: center;
+}
+
 .box {
     flex: 1;
     /* Makes both boxes take up equal space */
@@ -146,6 +166,9 @@ header {
 
 .button-container {
     margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .medium-button {
@@ -165,6 +188,17 @@ header {
     /* Make the button fill the width of the .box */
     box-sizing: border-box;
     /* Include padding and border in the element's total width and height */
+    text-align: center;
+}
+
+.large-button {
+    padding: 10px 20px;
+    justify-content: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    width: 50%;
     text-align: center;
 }
 
@@ -231,7 +265,6 @@ header {
     width: 100%;
 }
 
-#seed,
 .invest,
 .mission,
 .tailored,
@@ -323,9 +356,7 @@ header {
     width: 450px;
 }
 
-.seed-img {
-    width: 100%;
-}
+
 
 #seed .box {
     min-width: 400px;
@@ -437,4 +468,8 @@ header {
 #pricing li {
     text-align: left;
     font-size: 30px;
+}
+
+.jump50 {
+    margin-top: -50px;
 }
