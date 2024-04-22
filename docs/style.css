@@ -97,6 +97,26 @@ header {
     margin-top: 100px;
 }
 
+#tailored {
+    background-image: url(./images/image\ 4.png);
+    height: 85vh;
+    background-size: 100%;
+    background-position-y: 100px;
+}
+
+#tailored .boxes {
+    background-color: white;
+    width: 400px;
+    margin-top: 160px;
+    border-radius: 40px;
+    padding: 40px;
+    margin-left: -30px;
+}
+
+#tailored h2 {
+    color: skyblue;
+}
+
 .hero.home {
     background-color: #f0f0f0;
     /* Light gray background */
@@ -171,6 +191,10 @@ header {
     justify-content: center;
 }
 
+.block-container {
+    display: block;
+}
+
 .medium-button {
     padding: 10px 20px;
     /* Large padding for bigger buttons */
@@ -200,6 +224,10 @@ header {
     font-size: 16px;
     width: 50%;
     text-align: center;
+}
+
+.left-btn {
+    justify-content: left;
 }
 
 .sky-btn {
@@ -269,8 +297,6 @@ header {
 .mission,
 .tailored,
 .options,
-.solutions,
-.flexible,
 .why,
 #need,
 #pricing {
@@ -280,7 +306,6 @@ header {
 
 .mission h1,
 .mission a,
-.tailored h1,
 .tailored a,
 .need h1,
 #pricing h2 {
@@ -382,10 +407,6 @@ header {
     text-align: center;
 }
 
-#options {
-    border-top: 15px solid #004165;
-}
-
 #options .box {
     margin: 0px 30px;
     background-color: skyblue;
@@ -412,17 +433,6 @@ header {
 #options .content {
     text-align: center;
     height: 200px;
-}
-
-#solutions {
-    background-color: #004165;
-    color: skyblue;
-    text-align: left;
-}
-
-#solutions .left-box {
-    max-width: 400px;
-    margin-right: 50px;
 }
 
 #flexible li,
