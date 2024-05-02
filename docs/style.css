@@ -24,7 +24,13 @@ header {
 } */
 
 #seed .highlight{
+    font-size: 50px;
     color: lightskyblue;
+    margin: 30px 0 0 0;
+}
+
+#seed p {
+    font-size: 40px;
 }
 
 #seed .title {
@@ -102,25 +108,29 @@ header {
 
 #grow .highlight {
     color: skyblue;
+    
 }
 
 #grow h2 {
-    width: 800px;
+    width: 900px;
     text-align: center;
     margin: 20px auto;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 #grow h3 {
     min-height: 60px;
+    font-size: 40px
 }
 
 #grow .box {
     background-color: #004165;
     color: white;
-    border-radius: 20px;
+    border-radius: 30px;
     font-size: 24px;
-    padding: 15px;
+    padding: 45px;
+    margin: 30px;
+    border: solid 3px skyblue;
 }
 
 #grow li {
@@ -128,11 +138,12 @@ header {
     color: skyblue;
     margin-left: 20px;
     margin-bottom: 20px;
+    font-size: 40px;
 }
 
 #tailored {
     background-image: url(./images/image\ 4.png);
-    height: 85vh;
+    height: 95vh;
     background-size: 100%;
     background-position-y: 100px;
 }
@@ -151,23 +162,32 @@ header {
 }
 
 #works .subtitle {
-    width: 600px;
+    width: 800px;
+    font-size: 38px;
 }
 
 #works .box {
     border-radius: 20px;
-    padding: 20px;
+    padding: 30px 60px;
+    font-size: 30px;
+    margin: 40px;
+    text-align: center;
+}
+
+#savings h2 {
+    font-size: 34px;
 }
 
 #savings .box {
-    border-radius: 10px;
-    border: solid 1px skyblue;
-    padding: 10px;
-    font-size: 20px;
+    border-radius: 30px;
+    border: solid 3px skyblue;
+    padding: 20px;
+    font-size: 30px;
+    margin: 30px;
 }
 
 #savings p {
-    font-size: 24px;
+    font-size: 34px;
     text-align: center;
 }
 
@@ -456,15 +476,44 @@ header {
     color: darkgray;
 }
 
+#estimate input {
+    width: 95%;
+    height: 30px;
+    padding: 8px;
+    background: #f9f9f9;
+    border: 0px;
+    border-bottom: 1px solid darkgray;
+    color: darkgray;
+    /* background-color: gainsboro; */
+}
+
+#estimate select {
+    width: 490px;
+    padding: 5px;
+    background: #f9f9f9;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    border: 0px;
+    border-bottom: 1px solid darkgray;
+    color: darkgray;
+}
+
 .future-img {
     width: 360px;
     margin-left: 100px;
+    margin-top: 30px;
 }
 
 #simplified .highlight {
     color: skyblue;
+    font-size: 40px;
+    margin: 30px 0 0 0;
 }
 
+#simplified p {
+    font-size: 28px;
+}
 
 #seed .box {
     min-width: 400px;
@@ -494,11 +543,13 @@ header {
     margin: 0px 30px;
     background-color: skyblue;
     border-radius: 40px;
+    padding: 30px;
 }
 
 #options p {
     color: white;
     padding: 30px 40px;
+    font-size: 30px;
 }
 
 #options .title {
@@ -508,8 +559,9 @@ header {
 }
 
 #options .boxes {
-    max-width: 1000px;
+    max-width: 1200px;
     min-height: 46vh;
+    
     /* border: solid 1px red; */
 }
 
