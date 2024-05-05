@@ -314,10 +314,15 @@ header {
     /* Optional: bold text */
     font-size: 16px;
     /* Button text size */
-    width: 376px;
-    
     /* Include padding and border in the element's total width and height */
     /* text-align: center; */
+}
+
+.medium {
+    width: 376px;
+}
+.small {
+    width: 200px;
 }
 
 .medium-button {
@@ -425,7 +430,6 @@ header {
 .why,
 #savings .hero,
 #grow .hero,
-#need,
 #pricing,
 #cal {
     background-color: #004165;
@@ -435,7 +439,6 @@ header {
 .mission h1,
 .mission a,
 .tailored a,
-.need h1,
 #pricing h2,
 #savings h2 {
     color: lightskyblue;
@@ -566,9 +569,17 @@ header {
     text-align: center;
 }
 
+#contact {
+    height: 90vh;
+}
+
 #contact .boxes {
     width: 800px;
     margin: auto;
+}
+
+#contact .button-container {
+    margin-top: 30px;
 }
 
 #contact input {
@@ -693,10 +704,38 @@ header {
     height: 200px;
 }
 
+#flexible {
+    height: 130vh;
+}
+
+#flexible h1 {
+    font-size: 60px;
+}
+#flexible p {
+    font-size: 30px;
+}
+#flexible .button-container {
+    margin-top: 30px;
+}
+
+#flexible h2 {
+    font-size: 40px;
+}
+
+#flexible #save-time-img {
+    border-radius: 50px;
+    background: url(./images/flexible_1.png);
+    background-repeat: no-repeat;
+    padding: 20px;
+    width: 600px;
+    height: 80%;
+    background-size: 100% auto;
+}
+
 #flexible li,
 #why li {
     margin-bottom: 30px;
-    font-size: 22px;
+    font-size: 32px;
 }
 
 #why .boxes {
@@ -704,7 +743,7 @@ header {
 }
 
 #why .right-box {
-    background-color: skyblue;
+    background-color: #ddd;
 }
 
 #why .box {
@@ -713,8 +752,13 @@ header {
     height: 60vh;
 }
 
+#need h1 {
+    font-size: 50px;
+}
+
 #need h2 {
-    font-size: 34px;
+    text-align: center;
+    font-size: 44px;
 }
 
 #need .box {
@@ -723,11 +767,21 @@ header {
 }
 
 #need .note {
-    color: lightgray;
+    text-align: center;
+    font-size: 38px;
+}
+
+#assistance h1 {
+    color: skyblue;
+    font-size: 50px;
+}
+
+#assistance p {
+    font-size: 50px;
 }
 
 #pricing {
-    height: 90vh;
+    height: 100vh;
 }
 
 #pricing h2 {
