@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
 
 </head>
 
@@ -129,13 +130,21 @@
         <div class="box left-box">
           <div>
             <div><span>Home Price</span></div>
-            <div><input id="homeprice" placeholder="$420,000" /></div>
+            <div><input id="homeprice" value="420000" /></div>
           </div>
           <div>
             <div><span>Down Payment</span></div>
             <div>
-              <input id="downpayment" placeholder="$33,600" />
-              <input id="downpercent" placeholder="8%" /> </div>
+              <input id="downpayment" value="33600" />
+              <input id="downpercent" placeholder="8%" value="8%" /> 
+            </div>
+          </div>
+          <div>
+            <div><span>Closing Costs</span></div>
+            <div>
+              <input id="close-cost" value="11592" />
+              <input id="close-percent" value="3%" /> 
+            </div>
           </div>
           <div>
             <div>
@@ -145,16 +154,21 @@
               <select id="terms">
                 <option value="30">30 Years</option>
                 <option value="15">15 Years</option>
+                <option value="10">10 Years</option>
               </select>
             </div>
           </div>
           <div>
             <div><span>Interest Rate</span></div>
-            <div><input placeholder="7.00%" /></div>
+            <div><input id="interest-rate" value="7%" /></div>
+          </div>
+          <div>
+            <div><span>Zip Code</span></div>
+            <div><input id="zip" value="10011" /></div>
           </div>
     
           <div class="left-button-container">
-            <button class="btn sky-btn">Calculate</button>
+            <button id="cal-btn" class="btn sky-btn">Calculate</button>
           </div>
         </div>
         <div class="right-box">
@@ -218,37 +232,95 @@
 </body>
 
 <script>
-  const ctx = document.getElementById('myChart');
 
-  new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Principal', 'Interest', 'Property Tax', "Homeowner's insurance"],
-      datasets: [{
-        label: '# of Votes',
-        data: [2570, 1000, 500, 200],
-        borderWidth: 0
-      }]
-    },
-    options: {
-        plugins: {
-            legend: {
-                position: "right",
-                labels: {
-                    // This more specific font property overrides the global property
-                    font: {
-                        size: 12
+(function() {
+   
+    const homeprice = document.getElementById('homeprice');
+    const downpayment = document.getElementById('downpayment');
+    const downpercent = document.getElementById('downpercent');
+    const apr = document.getElementById("interest-rate");
+    const term = document.getElementById("terms");
+    const calbtn = document.getElementById("cal-btn");
+    const ctx = document.getElementById('myChart').getContext("2d");  
+
+    const calculatePayment = (amt, apr, term) => {
+      apr = parseInt(apr);
+      term = term *12;
+      apr = apr/100/12;
+      return Math.round(amt*apr * Math.pow((1 + apr), term)/(Math.pow((1 + apr), term) - 1) * 100)/100;
+    }
+
+    var myChart = undefined;
+    
+
+    const renderChart = () => {
+      monthlyPayment = calculatePayment(homeprice.value - downpayment.value, apr.value, term.value);
+      
+      // console.log(myChar)
+      if (myChart !== undefined){
+        myChart.destroy();
+        console.log(myChart);
+      }
+      
+    
+      myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Principal + Interest - $' + monthlyPayment, 'Property Tax - $340', "Homeowner's insurance - $200"],
+          datasets: [{
+            label: '# of Votes',
+            data: [monthlyPayment, 340, 200],
+            borderWidth: 0
+          }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    position: "right",
+                    labels: {
+                        // This more specific font property overrides the global property
+                        font: {
+                            size: 12
+                        }
                     }
                 }
-            }
-        },
-        layout: {
-            padding: {
-                left: 0
+            },
+            layout: {
+                padding: {
+                    left: 0
+                }
             }
         }
+      });
+      // myChart.destroy();
     }
-  });
+
+    renderChart();
+
+
+
+    const updateDown = () => {
+      downpayment.value = homeprice.value * (parseInt(downpercent.value)/100);
+      renderChart()
+    }
+    const updatePercent = () => {
+      downpercent.value = Math.round(downpayment.value/homeprice.value * 10000)/100 + "%";
+      renderChart()
+    }
+
+    homeprice.addEventListener("change", updateDown);
+    downpercent.addEventListener("change", updateDown);
+    downpayment.addEventListener("change", updatePercent);
+    calbtn.addEventListener("click", renderChart);
+
+
+
+
+})();
+
+
+
+
 </script>
 
 </html>

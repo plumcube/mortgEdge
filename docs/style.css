@@ -475,7 +475,7 @@ header {
 
 #cal {
     font-size: 25px;
-    height: 100vh;
+    height: 110vh;
 }
 
 #cal h2 {
@@ -499,6 +499,9 @@ header {
     text-align: center;
     margin-right: 0;
     max-width: 800px;
+    /* border: 1px solid yellow; */
+    /* height: 300px; */
+    max-height: 460px;
 }
 
 #cal .content {
@@ -547,12 +550,15 @@ header {
 #downpayment {
     width: 240px !important;
 }
-
 #downpercent {
     width: 100px !important;
 }
-
-
+#close-cost {
+    width: 240px !important;
+}
+#close-percent {
+    width: 100px !important;
+}
 
 
 #contact .hero {
