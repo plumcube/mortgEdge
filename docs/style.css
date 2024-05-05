@@ -746,19 +746,100 @@ header {
 }
 
 
+#estimate .left-box {
+    padding-left: 60px;
+    padding-top: 10px;
+    color: #333;
+    background-color: rgb(238, 230, 211);
+    max-width: 500px;
+}
+
+#estimate h2 {
+    margin-bottom: 40px;
+
+}
+
 #estimate input {
-    width: 95%;
+    width: 80%;
     height: 30px;
     padding: 8px;
     background: #f9f9f9;
     border: 0px;
     border-bottom: 1px solid darkgray;
     color: darkgray;
-    /* background-color: gainsboro; */
+    margin-bottom: 20px;
 }
 
+.flex-container {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 83%;
+}
+.longhand {
+    flex-flow: wrap row;
+}
+.flex-item {
+    border: 1px solid darkgray;
+    width: 42%;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+label {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+input:checked + label {
+    background: #eee;
+}
+input[type="radio"] {
+    display: none;
+}
+
+
+/* #estimate .button {
+    display: flex;
+    margin: 0 5px 0 0;
+    width: 100px;
+    height: 40px;
+}
+  
+#estimate .button label,
+#estimate .button input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+  
+#estimate .button input[type="radio"] {
+    opacity: 0.011;
+    z-index: 100;
+}
+  
+#estimate .button input[type="radio"]:checked + label {
+    background: #20b8be;
+    border-radius: 4px;
+}
+  
+#estimate .button label {
+    cursor: pointer;
+    z-index: 90;
+    line-height: 1.8em;
+} */
+  
+
 #estimate select {
-    width: 490px;
+    width: 83%;
     padding: 5px;
     background: #f9f9f9;
     height: 50px;
@@ -766,7 +847,7 @@ header {
     margin: auto;
     border: 0px;
     border-bottom: 1px solid darkgray;
-    color: darkgray;
+    margin-bottom: 50px;
 }
 
 .future-img {
@@ -921,7 +1002,7 @@ header {
 
 #assistance h1 {
     color: skyblue;
-    font-size: 50px;
+    font-size: 70px;
 }
 
 #assistance p {

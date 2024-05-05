@@ -143,24 +143,44 @@
     </div>
     <div class="boxes">
       <div class="box left-box">
-        Investment details
-        <span>Initial Investment</span>
-        <input type="text" />
-        <span>Additional investment contributions</span>
-        <input type="text" />
-        <span>Frequency of investment contributions</span>
-        <input type="text" /> <input type="text" />
-        <span>Years to grow</span>
-        <input type="text" />
-        <span>Expected rate of return</span>
-        <input type="text" />
-        <span>Compound frequency</span>
-        <select>
-          <option value="Job Function">Job Function</option>
-        </select>
+        <h2>Investment details</h2>
+        <div><span>Initial Investment</span></div>
+        <div><input type="text" /></div>
+
+
+        <div><span>Additional investment contributions</span></div>
+        <div><input id="inv-amt" type="text" /></div>
+
+        <div><span>Frequency of investment contributions</span></div>
+        <div>
+          <ul class="flex-container longhand">
+            <li class="flex-item"><input id="radio1" type="radio" name="radio"><label for="radio1">Monthly</label></li>
+            <li class="flex-item"><input id="radio2" type="radio" name="radio"><label for="radio2">Annually</label></li>
+          </ul>
+        </div>
+
+
+        <div><span>Years to grow</span></div>
+        <div><input id="inv-yr" type="text" /></div>
+        
+        <div><span>Expected rate of return</span></div>
+        <div><input id="inv-rate" type="text" /></div>
+
+        <div><span>Compound frequency</span></div>
+        <div>
+            <select id="frequency">
+              <option value="1">Monthly</option>
+              <option value="4">Quarterly</option>
+              <option value="6">Semi-annually</option>
+              <option value="12">Annually</option>
+            </select>
+        </div>
 
       </div>
       <div class="box right-box">
+        <div id="chart-container">
+          <canvas class="lineChart" id="myLineChart"></canvas>
+        </div>
       </div>
     </div>
   </section>
