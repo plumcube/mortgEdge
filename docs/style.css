@@ -141,6 +141,55 @@ header {
     font-size: 40px;
 }
 
+#boost .box h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+#boost h1 {
+    font-size: 65px;
+}
+#boost h2 {
+    color: skyblue;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+#boost .boxes {
+    font-size: 30px;
+}
+
+#boost .box1 {
+    flex: 2;
+    border-right: 3px solid #004165;
+    height: 320px;
+    margin-top: 60px;
+}
+
+#boost .box2 {
+    flex: 3;
+    padding-left: 10px;
+}
+
+#boost li {
+    margin-bottom: 30px;
+}
+
+#boost .box3 {
+    flex: 2;
+}
+
+#portfolio h2 {
+    color: skyblue;
+    font-size: 46px;
+    
+}
+
+#portfolio li {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
 #tailored {
     background-image: url(./images/image\ 4.png);
     height: 95vh;
@@ -158,6 +207,90 @@ header {
 }
 
 #tailored h2 {
+    color: skyblue;
+}
+
+
+#problem {
+    height: 120vh;
+}
+
+#problem h1 {
+    font-size: 50px;
+}
+
+#problem h2 {
+    color: skyblue; 
+    font-size: 48px;
+}
+
+#problem .content {
+    margin-left: 30px;
+}
+
+#problem .highlight {
+    color: skyblue;
+}
+
+#pr66 {
+    border-radius: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: skyblue;
+    font-size: 90px;
+    padding-top: 80px;
+    padding-left: 60px;
+    padding-right: 70px;
+    padding-bottom: 60px;
+    width: 150px;
+    height: 120px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#problem .boxes {
+    width: 900px;
+    margin: 80px auto;
+}
+
+#problem .box2 {
+    flex: 4;
+    margin-top: 26px;
+    margin-left: -50px;
+    padding-top: 40px;
+    padding-left: 60px;
+    border-top: 5px solid skyblue;
+    border-bottom: 5px solid skyblue;
+    height: 180px;
+    font-size: 40px;
+}
+
+#target {
+    background-image: url(./images/target.png);
+    height: 115vh;
+    background-size: 100%;
+    background-position-y: 100px;
+}
+
+#target li {
+    margin-bottom: 30px;
+}
+
+#target .highlight {
+    color: skyblue;
+}
+
+#target .boxes {
+    font-size: 38px;
+    position: absolute;
+    background-color: white;
+    width: 760px;
+    margin-top: 120px;
+    border-radius: 70px 0 0 70px;
+    padding-left: 50px;
+    right: 0;
+}
+
+#target h2 {
     color: skyblue;
 }
 
@@ -423,11 +556,18 @@ header {
     width: 100%;
 }
 
+.most-width {
+    width: 80%;
+}
+
 .invest,
 .mission,
 .tailored,
+#problem .hero,
+.target,
 .options,
 .why,
+#portfolio .hero,
 #savings .hero,
 #grow .hero,
 #pricing,
@@ -673,6 +813,10 @@ header {
     text-align: center;
 }
 
+#options {
+    height: 100vh;
+}
+
 #options .box {
     margin: 0px 30px;
     background-color: skyblue;
@@ -697,6 +841,10 @@ header {
     min-height: 46vh;
     
     /* border: solid 1px red; */
+}
+
+#options .button-container {
+    margin-top: 20px;
 }
 
 #options .content {
