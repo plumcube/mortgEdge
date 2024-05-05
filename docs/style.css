@@ -223,12 +223,12 @@ header {
 }
 
 .hero p {
-    font-size: 30px;
+    font-size: 34px;
     /* margin-bottom: 30px; */
     /* text-align: left; */
     margin-top: 10px;
     margin-bottom: 10px;
-    max-width: 1100px;
+    max-width: 1200px;
     /* border: solid 1px blue; */
     line-height: 1.1;
 }
@@ -242,7 +242,7 @@ header {
 }
 
 #home .boxes {
-    height: 65vh;
+    height: 75vh;
     /* border: solid 1px red; */
 }
 
@@ -252,8 +252,12 @@ header {
 }
 
 #home p {
-    max-width: 600px;
-    font-size: 34px;
+    font-size: 38px;
+}
+
+#home h3 {
+    max-width: 500px;
+    font-size: 30px;
 }
 
 .box {
@@ -290,6 +294,30 @@ header {
 
 .block-container {
     display: block;
+}
+
+.left-button-container {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+}
+
+
+.btn {
+    padding: 10px 20px;
+    /* Large padding for bigger buttons */
+    cursor: pointer;
+    /* Cursor changes to pointer to indicate button */
+    text-transform: uppercase;
+    /* Optional: uppercase text */
+    font-weight: bold;
+    /* Optional: bold text */
+    font-size: 16px;
+    /* Button text size */
+    width: 376px;
+    
+    /* Include padding and border in the element's total width and height */
+    /* text-align: center; */
 }
 
 .medium-button {
@@ -398,7 +426,8 @@ header {
 #savings .hero,
 #grow .hero,
 #need,
-#pricing {
+#pricing,
+#cal {
     background-color: #004165;
     color: #fff;
 }
@@ -443,6 +472,89 @@ header {
     width: 600px;
 }
 
+
+#cal {
+    font-size: 25px;
+    height: 100vh;
+}
+
+#cal h2 {
+    color: skyblue;
+}
+
+#cal .boxes {
+    padding: 0;
+}
+
+#cal .left-box {
+    max-width: 400px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+#cal .right-box {
+    background-color: white;
+    color: #004165;
+    text-align: center;
+    margin-right: 0;
+    max-width: 800px;
+}
+
+#cal .content {
+    padding-top: 30px;
+    padding-right: 0;
+    padding-left: 80px;
+}
+
+#cal input {
+    width: 360px;
+    height: 30px;
+    padding: 8px;
+    background: #f9f9f9;
+    border: 0px;
+    border-bottom: 1px solid darkgray;
+    color: darkgray;
+    font-size: 25px;
+}
+
+#cal select {
+    width: 376px;
+    padding: 5px;
+    background: #f9f9f9;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    border: 0px;
+    border-bottom: 1px solid darkgray;
+    color: #777;
+    font-size: 25px;
+}
+
+/* #cal .chart {
+    width: 600px;
+    margin-right: 430px;
+    margin-left: 0px;
+    
+} */
+
+#cal #chart-container {
+    padding-left: 50px;
+    width: 750px;
+    height: 450px;
+}
+
+#downpayment {
+    width: 240px !important;
+}
+
+#downpercent {
+    width: 100px !important;
+}
+
+
+
+
 #contact .hero {
     margin: auto;
     text-align: center;
@@ -475,6 +587,7 @@ header {
     border-bottom: 1px solid darkgray;
     color: darkgray;
 }
+
 
 #estimate input {
     width: 95%;
@@ -519,6 +632,10 @@ header {
     min-width: 400px;
 }
 
+#seed p {
+    max-width: 550px;
+}
+
 .fibonacci {
     width: 100%;
     height: 250px;
@@ -559,7 +676,7 @@ header {
 }
 
 #options .boxes {
-    max-width: 1200px;
+    max-width: 1100px;
     min-height: 46vh;
     
     /* border: solid 1px red; */

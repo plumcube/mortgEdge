@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -31,12 +32,12 @@
   <section id="home">
     <div class="hero home">
       <h1>Unlock Your Dream Home: Plan Early, Save Smarter, Own Sooner</h1>
-      <p>A seamless, all-inclusive platform empowers employees to effortlessly save and invest for homeownership with employee sponsored benefits</p>
+      <p>MortgEdge helps you save and invest for upfront home costs through workplace benefits, while helping businesses attract and retain top talent.</p>
     </div>
     <div class="boxes">
       <div class="box left-box">
         <h1>Get Started</h1>
-        <p>Take the first step to becoming a homeowner today</p>
+        <h3>Take the first step to becoming a homeowner today</h3>
         <div class="button-container block-container">
           <button class="full-width-button navy-btn">Open an Individual Account</button>
           <button class="full-width-button sky-btn">Mortgage For Employers</button>
@@ -76,6 +77,8 @@
   </section>
 
 
+
+
   <section id="mission">
     <div class="hero mission">
       <h1>Our Mission</h1>
@@ -103,14 +106,73 @@
       </div>
     </div>
   </section>
+
+
+
+
   <section id="cal">
     <div class="hero">
       <h1>Define your goals, create a tailored plan</h1>
-      <p>
-        Restore confidence in the american dream by equipping individuals with the financial resources to pave their path to homeownership
-      </p>
+    </div>
+    <div class="content">
+      <div class="boxes">
+        <div class="box left-box">
+          <h2>MortgEdge Calculator</h2>
+        </div>
+        <div class="box right-box">
+          <h3>Begin Saving for Your <span id="down-copy">$45,192</span> Down Payment & Closing Costs</h3>
+        </div>
+      </div>
+
+
+      <div class="boxes">
+        <div class="box left-box">
+          <div>
+            <div><span>Home Price</span></div>
+            <div><input id="homeprice" placeholder="$420,000" /></div>
+          </div>
+          <div>
+            <div><span>Down Payment</span></div>
+            <div>
+              <input id="downpayment" placeholder="$33,600" />
+              <input id="downpercent" placeholder="8%" /> </div>
+          </div>
+          <div>
+            <div>
+              <span>Loan Term</span>
+            </div>
+            <div>
+              <select id="terms">
+                <option value="30">30 Years</option>
+                <option value="15">15 Years</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <div><span>Interest Rate</span></div>
+            <div><input placeholder="7.00%" /></div>
+          </div>
+    
+          <div class="left-button-container">
+            <button class="btn sky-btn">Calculate</button>
+          </div>
+        </div>
+        <div class="right-box">
+          <div id="chart-container">
+            <canvas class="chart" id="myChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      
+
+    
     </div>    
   </section>
+
+
+
+
   <section id="contact">
     <div class="hero">
       <h1>Contact Our Team</h1>
@@ -151,9 +213,42 @@
   </section>
 
 
-  <!-- <footer>
-    <p>© 2024 MortgEdge. All rights reserved.</p>
-  </footer> -->
+  
+
 </body>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Principal', 'Interest', 'Property Tax', "Homeowner's insurance"],
+      datasets: [{
+        label: '# of Votes',
+        data: [2570, 1000, 500, 200],
+        borderWidth: 0
+      }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                position: "right",
+                labels: {
+                    // This more specific font property overrides the global property
+                    font: {
+                        size: 12
+                    }
+                }
+            }
+        },
+        layout: {
+            padding: {
+                left: 0
+            }
+        }
+    }
+  });
+</script>
 
 </html>
