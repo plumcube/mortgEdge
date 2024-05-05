@@ -751,7 +751,7 @@ header {
     padding-top: 10px;
     color: #333;
     background-color: rgb(238, 230, 211);
-    max-width: 500px;
+    max-width: 400px;
 }
 
 #estimate h2 {
@@ -801,45 +801,10 @@ input:checked + label {
 }
 input[type="radio"] {
     display: none;
-}
-
-
-/* #estimate .button {
-    display: flex;
-    margin: 0 5px 0 0;
-    width: 100px;
-    height: 40px;
-}
-  
-#estimate .button label,
-#estimate .button input {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-  
-#estimate .button input[type="radio"] {
-    opacity: 0.011;
-    z-index: 100;
-}
-  
-#estimate .button input[type="radio"]:checked + label {
-    background: #20b8be;
-    border-radius: 4px;
-}
-  
-#estimate .button label {
-    cursor: pointer;
-    z-index: 90;
-    line-height: 1.8em;
-} */
-  
+} 
 
 #estimate select {
-    width: 83%;
+    width: 84%;
     padding: 5px;
     background: #f9f9f9;
     height: 50px;
