@@ -746,6 +746,8 @@ header {
 }
 
 
+
+
 #estimate .left-box {
     padding-left: 60px;
     padding-top: 10px;
@@ -765,9 +767,13 @@ header {
     padding: 8px;
     background: #f9f9f9;
     border: 0px;
-    border-bottom: 1px solid darkgray;
-    color: darkgray;
+    border: 1px solid darkgray;
     margin-bottom: 20px;
+    
+}
+
+#estimate .highlight {
+    border: 2px solid skyblue;
 }
 
 .flex-container {
@@ -789,19 +795,17 @@ header {
     background-color: white;
     border-radius: 5px;
 }
+
 label {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
-}
-input:checked + label {
-    background: #eee;
 }
 input[type="radio"] {
     display: none;
-} 
+    cursor: pointer;
+}
 
 #estimate select {
     width: 84%;

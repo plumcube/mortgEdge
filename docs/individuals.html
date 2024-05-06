@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 </head>
 
@@ -144,27 +146,27 @@
     <div class="boxes">
       <div class="box left-box">
         <h2>Investment details</h2>
-        <div><span>Initial Investment</span></div>
-        <div><input type="text" /></div>
+        <div><span>Initial investment</span></div>
+        <div><input id="inv-amt" type="text" value="5000" /></div>
 
 
         <div><span>Additional investment contributions</span></div>
-        <div><input id="inv-amt" type="text" /></div>
+        <div><input id="inv-add" type="text" value="400" /></div>
 
         <div><span>Frequency of investment contributions</span></div>
         <div>
           <ul class="flex-container longhand">
-            <li class="flex-item"><input id="radio1" type="radio" name="radio"><label for="radio1">Monthly</label></li>
-            <li class="flex-item"><input id="radio2" type="radio" name="radio"><label for="radio2">Annually</label></li>
+            <li class="flex-item highlight"><input id="radio1" type="radio" name="radio" value="12"><label for="radio1">Monthly</label></li>
+            <li class="flex-item"><input id="radio2" type="radio" name="radio" value="1"><label for="radio2">Annually</label></li>
           </ul>
         </div>
 
 
         <div><span>Years to grow</span></div>
-        <div><input id="inv-yr" type="text" /></div>
+        <div><input id="inv-yr" type="text" value="7" /></div>
         
         <div><span>Expected rate of return</span></div>
-        <div><input id="inv-rate" type="text" /></div>
+        <div><input id="inv-rate" type="text" value="10%" /></div>
 
         <div><span>Compound frequency</span></div>
         <div>
@@ -178,6 +180,10 @@
 
       </div>
       <div class="box right-box">
+        <div>
+          <h2 class="center">Total Balance</h2>
+          <h3 class="center">$85,100</h3>
+        </div>
         <div id="chart-container">
           <canvas class="lineChart" id="myLineChart"></canvas>
         </div>
@@ -227,10 +233,107 @@
 
     </div>
   </section>
-
-  <!-- <footer>
-    <p>© 2024 MortgEdge. All rights reserved.</p>
-  </footer> -->
 </body>
+
+<script>
+(function() {
+
+  
+    const investment = document.getElementById("inv-amt");
+    const addAmt = document.getElementById("inv-add");
+    const addFreqs = document.getElementsByName("add-freq");
+    const monthly = document.getElementById("radio1");
+    const annually = document.getElementById("radio2");
+    var addFreq = 12;
+    const rate = document.getElementById("inv-rate");
+    const investYear = document.getElementById("inv-yr");
+    const frequency = document.getElementById("frequency");
+    const ctx = document.getElementById("myLineChart").getContext("2d");  
+
+    const getTatalArr = (amt, rate, investYear, frequency, addAmt, addFreq) => {
+      let totalArr = [];
+
+      console.log(parseInt(amt), rate, investYear, frequency, addAmt, addFreq);
+      amt = parseInt(amt);
+      rate = parseFloat(rate);
+      addAmt = parseInt(addAmt);
+      addFreq = parseInt(addFreq);
+
+      for (let i = 0, tmp = 0; i < investYear; i++) {
+        totalArr[i] = amt;
+        amt = amt * (1+(rate/100));
+      }
+      console.log(totalArr);
+      return totalArr;
+    }
+
+    var myChart = undefined;
+    const renderChart = () => {
+      let subTotalArr = getTatalArr(investment.value, rate.value, investYear.value, addAmt.value, addFreq);
+      
+      if (myChart !== undefined){
+        myChart.destroy();
+        console.log(myChart);
+      }
+      
+    
+      myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: [1023, 13213, 213213,4213],
+          datasets: [
+            {
+              label: 'Total Value Includes Interest',
+              data: subTotalArr,
+              backgroundColor: 'rgba(155, 200, 132, 0.2)',
+              borderWidth: 2,
+              fill: true,
+              borderColor: 'rgba(155, 200, 132, 0.9)',
+              tension: 0.1
+            },
+            {
+              label: 'Principal Value',
+              data: subTotalArr,
+              backgroundColor: 'rgba(155, 200, 230, 0.6)',
+              borderWidth: 2,
+              fill: true,
+              borderColor: 'rgba(155, 200, 230, 0.9)',
+              tension: 0.1
+            }
+        ]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    position: "top",
+                    labels: {
+                        font: {
+                            size: 12
+                        }
+                    }
+                }
+            },
+            layout: {
+                padding: {
+                    left: 0
+                }
+            }
+        }
+      });
+    }
+
+    renderChart();
+   
+    investment.addEventListener("change", renderChart);
+    addAmt.addEventListener("change", renderChart);
+    monthly.addEventListener("click", renderChart);
+    annually.addEventListener("click", renderChart);
+    investYear.addEventListener("change", renderChart);
+    frequency.addEventListener("change", renderChart);
+
+
+})();
+
+</script>
 
 </html>
