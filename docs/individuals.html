@@ -171,10 +171,10 @@
         <div><span>Compound frequency</span></div>
         <div>
             <select id="frequency">
-              <option value="1">Monthly</option>
+              <option value="12">Monthly</option>
               <option value="4">Quarterly</option>
-              <option value="6">Semi-annually</option>
-              <option value="12">Annually</option>
+              <option value="2">Semi-annually</option>
+              <option value="1">Annually</option>
             </select>
         </div>
 
@@ -247,21 +247,23 @@
     var addFreq = 12;
     const rate = document.getElementById("inv-rate");
     const investYear = document.getElementById("inv-yr");
-    const frequency = document.getElementById("frequency");
+    const cmpFreq = document.getElementById("frequency");
     const ctx = document.getElementById("myLineChart").getContext("2d");  
 
-    const getTatalArr = (amt, rate, investYear, frequency, addAmt, addFreq) => {
+    const getTatalArr = (amt, rate, investYear, cmpFreq, addAmt, addFreq) => {
       let totalArr = [];
 
-      console.log(parseInt(amt), rate, investYear, frequency, addAmt, addFreq);
       amt = parseInt(amt);
-      rate = parseFloat(rate);
+      rate = parseFloat(rate)/cmpFreq;
       addAmt = parseInt(addAmt);
       addFreq = parseInt(addFreq);
+      cmpFreq = parseInt(cmpFreq);
+      console.log(amt, rate, investYear, cmpFreq, addAmt, addFreq);
 
       for (let i = 0, tmp = 0; i < investYear; i++) {
         totalArr[i] = amt;
-        amt = amt * (1+(rate/100));
+        console.log(Math.pow(1+(rate/100), cmpFreq));
+        amt = amt * Math.pow(1+(rate/100), cmpFreq);
       }
       console.log(totalArr);
       return totalArr;
@@ -269,22 +271,28 @@
 
     var myChart = undefined;
     const renderChart = () => {
-      let subTotalArr = getTatalArr(investment.value, rate.value, investYear.value, addAmt.value, addFreq);
+      let totalArr = getTatalArr(investment.value, rate.value, investYear.value, cmpFreq.value, addAmt.value, addFreq);
+      let principalArr = getTatalArr(investment.value, 0, investYear.value, cmpFreq.value, addAmt.value, addFreq);
       
       if (myChart !== undefined){
         myChart.destroy();
         console.log(myChart);
       }
       
+      let currentYear = new Date().getFullYear();
+      let labelArr = [];
+      for (let i = 0; i < parseInt(investYear.value); i++) {
+        labelArr[i] = currentYear + i;
+      }
     
       myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: [1023, 13213, 213213,4213],
+          labels: labelArr,
           datasets: [
             {
               label: 'Total Value Includes Interest',
-              data: subTotalArr,
+              data: totalArr,
               backgroundColor: 'rgba(155, 200, 132, 0.2)',
               borderWidth: 2,
               fill: true,
@@ -293,7 +301,7 @@
             },
             {
               label: 'Principal Value',
-              data: subTotalArr,
+              data: principalArr,
               backgroundColor: 'rgba(155, 200, 230, 0.6)',
               borderWidth: 2,
               fill: true,
