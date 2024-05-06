@@ -156,8 +156,8 @@
         <div><span>Frequency of investment contributions</span></div>
         <div>
           <ul class="flex-container longhand">
-            <li class="flex-item highlight"><input id="radio1" type="radio" name="radio" value="12"><label for="radio1">Monthly</label></li>
-            <li class="flex-item"><input id="radio2" type="radio" name="radio" value="1"><label for="radio2">Annually</label></li>
+            <li id="r1-container" class="flex-item highlight"><input id="radio1" type="radio" name="radio" value="12"><label for="radio1">Monthly</label></li>
+            <li id="r2-container" class="flex-item"><input id="radio2" type="radio" name="radio" value="1"><label for="radio2">Annually</label></li>
           </ul>
         </div>
 
@@ -181,8 +181,8 @@
       </div>
       <div class="box right-box">
         <div>
-          <h2 class="center">Total Balance</h2>
-          <h3 class="center">$85,100</h3>
+          <h3 class="center">Total Balance</h3>
+          <h4 class="center" id="totalBalance">$85,100</h4>
         </div>
         <div id="chart-container">
           <canvas class="lineChart" id="myLineChart"></canvas>
@@ -238,7 +238,6 @@
 <script>
 (function() {
 
-  
     const investment = document.getElementById("inv-amt");
     const addAmt = document.getElementById("inv-add");
     const addFreqs = document.getElementsByName("add-freq");
@@ -249,6 +248,7 @@
     const investYear = document.getElementById("inv-yr");
     const cmpFreq = document.getElementById("frequency");
     const ctx = document.getElementById("myLineChart").getContext("2d");  
+    const numberFormat = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
 
     const getTatalArr = (amt, rate, investYear, cmpFreq, addAmt, addFreq) => {
       let totalArr = [];
@@ -258,14 +258,12 @@
       addAmt = parseInt(addAmt);
       addFreq = parseInt(addFreq);
       cmpFreq = parseInt(cmpFreq);
-      console.log(amt, rate, investYear, cmpFreq, addAmt, addFreq);
 
       for (let i = 0, tmp = 0; i < investYear; i++) {
         totalArr[i] = amt;
-        console.log(Math.pow(1+(rate/100), cmpFreq));
-        amt = amt * Math.pow(1+(rate/100), cmpFreq);
+        amt = amt * Math.pow(1+(rate/100), cmpFreq) + (addAmt * addFreq);
       }
-      console.log(totalArr);
+
       return totalArr;
     }
 
@@ -274,6 +272,8 @@
       let totalArr = getTatalArr(investment.value, rate.value, investYear.value, cmpFreq.value, addAmt.value, addFreq);
       let principalArr = getTatalArr(investment.value, 0, investYear.value, cmpFreq.value, addAmt.value, addFreq);
       
+      document.getElementById("totalBalance").innerHTML = numberFormat.format(totalArr[totalArr.length-1]);
+
       if (myChart !== undefined){
         myChart.destroy();
         console.log(myChart);
@@ -291,7 +291,7 @@
           labels: labelArr,
           datasets: [
             {
-              label: 'Total Value Includes Interest',
+              label: 'Total Interest',
               data: totalArr,
               backgroundColor: 'rgba(155, 200, 132, 0.2)',
               borderWidth: 2,
@@ -313,13 +313,16 @@
         options: {
             plugins: {
                 legend: {
-                    position: "top",
+                    position: "bottom",
                     labels: {
                         font: {
                             size: 12
                         }
                     }
                 }
+            },
+            scales:{
+              y:{beginAtZero: true}
             },
             layout: {
                 padding: {
@@ -331,13 +334,28 @@
     }
 
     renderChart();
+
+    const updateAddFreq = (freq) => {
+      addFreq = freq;
+      let r1 = document.getElementById("r1-container");
+      let r2 = document.getElementById("r2-container");
+      if (freq === 1) {
+        r1.style.border = "1px solid darkgray";
+        r2.style.border = "3px solid skyblue";
+      } else {
+        r1.style.border = "3px solid skyblue";
+        r2.style.border = "1px solid darkgray";
+      }
+      renderChart();
+    }
    
     investment.addEventListener("change", renderChart);
     addAmt.addEventListener("change", renderChart);
-    monthly.addEventListener("click", renderChart);
-    annually.addEventListener("click", renderChart);
+    rate.addEventListener("change", renderChart);
+    monthly.addEventListener("click", () => updateAddFreq(12));
+    annually.addEventListener("click", () => updateAddFreq(1));
     investYear.addEventListener("change", renderChart);
-    frequency.addEventListener("change", renderChart);
+    cmpFreq.addEventListener("change", renderChart);
 
 
 })();
