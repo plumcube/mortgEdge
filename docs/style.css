@@ -691,6 +691,10 @@ header {
     z-index: 1;
 }
 
+#cal #chart-container h3 {
+    margin-bottom: -40px;
+}
+
 #downpayment {
     width: 240px !important;
 }

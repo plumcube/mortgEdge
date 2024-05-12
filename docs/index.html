@@ -173,6 +173,7 @@
         </div>
         <div class="right-box">
           <div id="chart-container">
+            <h3>Estimated Monthly Payment</h3>
             <canvas class="chart" id="myChart"></canvas>
           </div>
         </div>
@@ -241,10 +242,15 @@
     const homeprice = document.getElementById('homeprice');
     const downpayment = document.getElementById('downpayment');
     const downpercent = document.getElementById('downpercent');
+    const downcopy = document.getElementById("down-copy");
+
+    const closecost = document.getElementById('close-cost');
+    const closepercent = document.getElementById('close-percent');
+
     const apr = document.getElementById("interest-rate");
     const term = document.getElementById("terms");
     const calbtn = document.getElementById("cal-btn");
-    const ctx = document.getElementById('myChart').getContext("2d");  
+    const ctx = document.getElementById("myChart").getContext("2d");  
 
     const calculatePayment = (amt, apr, term) => {
       apr = parseInt(apr);
@@ -254,10 +260,13 @@
     }
 
     var myChart = undefined;
-    
 
+    const formatUSD = x => "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    
     const renderChart = () => {
       monthlyPayment = calculatePayment(homeprice.value - downpayment.value, apr.value, term.value);
+
+      downcopy.innerHTML = formatUSD(parseInt(closecost.value) + parseInt(downpayment.value));
       
       // console.log(myChar)
       if (myChart !== undefined){
@@ -320,6 +329,15 @@
     downpercent.addEventListener("change", updateDown);
     downpayment.addEventListener("change", updatePercent);
     calbtn.addEventListener("click", renderChart);
+
+    closecost.addEventListener("change", () => {
+      closepercent.value = Math.round(closecost.value / homeprice.value  * 10000)/100 + "%";
+      renderChart()
+    });
+    closepercent.addEventListener("change", () => {
+      closecost.value = Math.round(homeprice.value * (parseInt(closepercent.value)/100));
+      renderChart()
+    });
 
 
 
