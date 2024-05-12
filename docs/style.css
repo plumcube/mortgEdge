@@ -16,12 +16,8 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
 }
-
-/* section {
-    max-width: 1400px;
-    margin: auto;
-} */
 
 #seed .highlight{
     font-size: 50px;
@@ -199,15 +195,20 @@ header {
 
 #tailored .boxes {
     background-color: white;
-    width: 400px;
-    margin-top: 160px;
-    border-radius: 40px;
-    padding: 40px;
-    margin-left: -30px;
+    width: 660px;
+    margin-top: 100px;
+    border-radius: 50px;
+    padding: 20px 40px 60px 90px;
+    margin-left: -40px;
 }
 
 #tailored h2 {
     color: skyblue;
+    font-size: 40px;
+}
+
+#tailored p {
+    font-size: 36px;
 }
 
 
@@ -320,12 +321,13 @@ header {
 }
 
 #savings p {
-    font-size: 34px;
+    font-size: 30px;
     text-align: center;
 }
 
 #savings li {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .navy {
@@ -558,6 +560,7 @@ header {
 
 .most-width {
     width: 80%;
+    margin-top: -60px;
 }
 
 .invest,
@@ -640,11 +643,10 @@ header {
     background-color: white;
     color: #004165;
     text-align: center;
-    margin-right: 0;
-    max-width: 800px;
-    /* border: 1px solid yellow; */
-    /* height: 300px; */
-    max-height: 460px;
+    margin-left: 0;
+    width: 850px;
+    left: 530px;
+    position: absolute;
 }
 
 #cal .content {
@@ -660,9 +662,10 @@ header {
     background: #f9f9f9;
     border: 0px;
     border-bottom: 1px solid darkgray;
-    color: darkgray;
+    color: #004165;
     font-size: 25px;
 }
+
 
 #cal select {
     width: 376px;
@@ -673,21 +676,19 @@ header {
     margin: auto;
     border: 0px;
     border-bottom: 1px solid darkgray;
-    color: #777;
+    color: #004165;
     font-size: 25px;
 }
 
-/* #cal .chart {
-    width: 600px;
-    margin-right: 430px;
-    margin-left: 0px;
-    
-} */
-
 #cal #chart-container {
+    margin-left: 0;
     padding-left: 50px;
-    width: 750px;
-    height: 450px;
+    height: 540px;
+    width: 800px;
+    text-align: left;
+    position:static;
+    background-color: #fff;
+    z-index: 1;
 }
 
 #downpayment {
@@ -752,7 +753,7 @@ header {
     padding-left: 60px;
     padding-top: 10px;
     color: #333;
-    background-color: rgb(238, 230, 211);
+    background-color: lightgray;
     max-width: 400px;
 }
 
@@ -783,7 +784,7 @@ header {
 #totalBalance {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
-    color: rgb(23, 90, 23);
+    color: #004165;
     margin-bottom: 30px;
 }
 
@@ -958,7 +959,7 @@ input[type="radio"] {
 #why .box {
     margin: 0;
     padding-left: 25px;
-    height: 60vh;
+    min-height: 60vh;
 }
 
 #need h1 {
@@ -980,13 +981,26 @@ input[type="radio"] {
     font-size: 38px;
 }
 
+#assistance {
+    width: 80%;
+}
+
 #assistance h1 {
     color: skyblue;
     font-size: 70px;
 }
 
+#assistance h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
 #assistance p {
     font-size: 50px;
+}
+
+#assistance .boxes {
+    margin: 0;
 }
 
 #pricing {
