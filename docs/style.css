@@ -267,9 +267,10 @@ header {
 
 #target {
     background-image: url(./images/target.png);
-    height: 115vh;
+    height: 96vh;
     background-size: 100%;
     background-position-y: 100px;
+    background-repeat: no-repeat;
 }
 
 #target li {
