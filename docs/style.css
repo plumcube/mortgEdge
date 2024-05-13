@@ -700,6 +700,12 @@ header {
     margin-bottom: -40px;
 }
 
+#cal #monthly {
+    text-align: center;
+    margin-top: 60px;
+    width: 340px;
+}
+
 #downpayment {
     width: 240px !important;
 }

@@ -174,6 +174,7 @@
         <div class="right-box">
           <div id="chart-container">
             <h3>Estimated Monthly Payment</h3>
+            <h3 id="monthly"></h3>
             <canvas class="chart" id="myChart"></canvas>
           </div>
         </div>
@@ -243,6 +244,7 @@
     const downpayment = document.getElementById('downpayment');
     const downpercent = document.getElementById('downpercent');
     const downcopy = document.getElementById("down-copy");
+    const monthly = document.getElementById("monthly");
 
     const closecost = document.getElementById('close-cost');
     const closepercent = document.getElementById('close-percent');
@@ -267,6 +269,7 @@
       monthlyPayment = calculatePayment(homeprice.value - downpayment.value, apr.value, term.value);
 
       downcopy.innerHTML = formatUSD(parseInt(closecost.value) + parseInt(downpayment.value));
+      monthly.innerHTML = formatUSD(200 + 340 + parseInt(monthlyPayment));
       
       // console.log(myChar)
       if (myChart !== undefined){
